@@ -1,0 +1,112 @@
+header {
+    position: relative;
+}
+
+nav {
+    background-color: $background;
+    padding-top: 15px;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    column-gap: 25px;
+    align-items: center;
+}
+.nav_link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+.nav_link:hover{
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.btn_item {
+    padding-left: 83px;
+    padding-bottom: 11px;
+
+    @include for-phone {
+        padding-left: 20px;
+    }
+    @include for-phone_2{
+        display: none;
+    }
+}
+
+.btn {
+    text-decoration: none;
+    padding: 16px 48px;
+    color:$background;
+    max-width: 145px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+}
+
+@media (max-width:670px) {
+    .nav_menu {
+        padding: 12px 20px;
+        padding-bottom: 20px;
+    }
+
+    .nav_list {
+        display: none;
+    }
+
+    .menu_btn {
+        position: absolute;
+        background-image: url(../images/menu.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: .2s ease;
+        color: #FFFFFF;
+    }
+    .menu_btn.active {
+        z-index: 999;
+        background: url(../images/close.png) no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: .2s ease;
+      }
+    .nav_list.active {
+        z-index: 888;
+        position: fixed;
+        background-color:$background;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+        transition:  .2s ease;
+        row-gap: 30px;
+      }
+      .nav_list a {
+        color: #FFFFFF;
+        font-size: 22px;
+        margin: 10px;
+        padding: 0 20px;
+        border-radius: 20px;
+      }
+}

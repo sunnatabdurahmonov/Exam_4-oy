@@ -1,0 +1,32 @@
+@mixin for-tablet {
+    @media screen and (max-width:1210px){
+        @content;
+    }
+    
+}
+@mixin for-tablet-2 {
+    @media screen and (max-width:960px){
+        @content;
+    }
+    
+}
+
+@mixin for-phone {
+    @media screen and (max-width:770px){
+        @content;
+    }
+    
+}
+@mixin for-phone_2 {
+    @media screen and (max-width:670px){
+        @content;
+    }
+    
+}
+@mixin for-phone_3 {
+    @media screen and (max-width:435px){
+        @content;
+    }
+    
+}
+
